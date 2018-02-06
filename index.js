@@ -4,6 +4,7 @@ const BASE_URL = "https://api.shoppingadventure.fr/api/franprix/v1";
 const AUTH_URL = BASE_URL + "/auth";
 const COUPON_URL = BASE_URL + "/extra/targeting";
 const ADD_COUPON_URL = BASE_URL + "/extra/clipping";
+const INFOS_URL = BASE_URL + "/me";
 
 export default class franprixApi {
 
@@ -72,6 +73,22 @@ export default class franprixApi {
             });
             let res = await response.json();
             return res;
+        }
+        catch(error) {
+            console.log("error", error);
+        }
+    }
+
+    async getMyInfos() {
+        try {
+            let response = await fetch(INFOS_URL, {
+                method: "GET",
+                headers : {
+                    "Authorization": `Bearer ${this.token.access_token}`
+                }
+            });
+            let data = await response.json();
+            return data;
         }
         catch(error) {
             console.log("error", error);
