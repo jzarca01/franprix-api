@@ -1,4 +1,4 @@
-import fetch from ("node-fetch");
+import fetch from "node-fetch";
 
 const BASE_URL = "https://api.shoppingadventure.fr/api/franprix/v1";
 const AUTH_URL = BASE_URL + "/auth";
@@ -22,7 +22,7 @@ export default class franprixApi {
                 body: JSON.stringify(loginInfos)
             });
             let data = await response.json();
-            this.token = {...data.token};
+            this.token = data.token;
         }
         catch(error) {
             console.log("error", error);
