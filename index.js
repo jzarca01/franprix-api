@@ -17,7 +17,7 @@ franprixApi.prototype.signIn = async function(login, password) {
             body: JSON.stringify(loginInfos)
         });
         let data = await response.json();
-        return data;
+        return data.token;
     }
     catch(error) {
         console.log("error", error);
@@ -33,7 +33,7 @@ franprixApi.prototype.getAvailableCoupons = async function(accessToken) {
             }
         });
         let data = await response.json();
-        return data.offers;
+        return data.offers_clipped;
     }
     catch(error) {
         console.log("error", error);
