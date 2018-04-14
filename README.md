@@ -18,7 +18,7 @@ franprix.getAvailableCoupons(API_TOKEN)
 franprix.getMyCoupons(API_TOKEN)
   .then(response => console.log(response))
 
-franprix.addCouponToCard(couponsId = [], API_TOKEN)
+franprix.addCouponsToCard(couponsId = [], API_TOKEN)
   .then(response => console.log(response))
 
 franprix.getMyInfos(API_TOKEN)

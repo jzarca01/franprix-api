@@ -33,7 +33,7 @@ franprixApi.prototype.getAvailableCoupons = async function(accessToken) {
             }
         });
         let data = await response.json();
-        return data.offers_clipped;
+        return data.offers;
     }
     catch(error) {
         console.log("error", error);
@@ -56,7 +56,7 @@ franprixApi.prototype.getMyCoupons = async function(accessToken) {
     }
 }
 
-franprixApi.prototype.addCouponToCard = async function(couponsIds, accessToken) {
+franprixApi.prototype.addCouponsToCard = async function(couponsIds, accessToken) {
     const couponInfos = { "ids" : couponsIds };
     try {
         let response = await fetch(ADD_COUPON_URL, {
