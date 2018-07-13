@@ -33,7 +33,12 @@ franprix.getMyCoupons();
 franprix.addCouponToCard((couponsId = []));
 ```
 
+<<<<<<< HEAD
 ### Get user's infos
+=======
+franprix.addCouponsToCard(couponsId = [], API_TOKEN)
+  .then(response => console.log(response))
+>>>>>>> c0f9bbe2c8d0bf04f2b3bf9f5be2acc9c122d4c0
 
 ```javascript
 franprix.getMyInfos();
