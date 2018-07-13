@@ -1,26 +1,40 @@
 # franprix-api
+
 Une API pour gérer les promos personnalisées de la carte Franprix, **sans le retargeting**
 
-## Utilisation
+## Usage
 
+```javascript
+const Franprix = require("franprix-api");
+const franprix = new Franprix();
 ```
-const FranprixApi = require('franprix-api')
-const franprix = new FranprixApi()
 
-franprix.signIn(login, password)
-  .then(response => {
-    API_TOKEN = response.token
-    })
+### Log in
 
-franprix.getAvailableCoupons(API_TOKEN)
-  .then(response => console.log(response))
-  
-franprix.getMyCoupons(API_TOKEN)
-  .then(response => console.log(response))
+```javascript
+franprix.signIn(login, password);
+```
 
-franprix.addCouponToCard(couponsId = [], API_TOKEN)
-  .then(response => console.log(response))
+### Get available coupons
 
-franprix.getMyInfos(API_TOKEN)
-  .then(response => console.log(response))
+```javascript
+franprix.getAvailableCoupons();
+```
+
+### Get user's coupons
+
+```javascript
+franprix.getMyCoupons();
+```
+
+### Add coupons to card
+
+```javascript
+franprix.addCouponToCard((couponsId = []));
+```
+
+### Get user's infos
+
+```javascript
+franprix.getMyInfos();
 ```
