@@ -5,9 +5,11 @@ Une API pour gérer les promos personnalisées de la carte Franprix, **sans le r
 ## Usage
 
 ```javascript
-const Franprix = require("franprix-api");
+const Franprix = require('franprix-api');
 const franprix = new Franprix();
 ```
+
+See example.js
 
 ### Log in
 

@@ -1,17 +1,20 @@
 const FranprixApi = require("./index")
 const franprix = new FranprixApi()
 
-const config = require('./config.json')
+const config = require('./config/config.json')
 
-let API_TOKEN = ''
+async function init() {
+    try {
+        await franprix.signIn(config.login, config.password)
+        const infos = await franprix.getMyInfos()
+        console.log(infos)
 
-franprix.signIn(config.login, config.password)
-    .then(() => franprix.getAvailableCoupons())
-    .then(offers => {
+        const offers = franprix.getAvailableCoupons()
         console.log(`${offers.length} offers available`)
-        offersId = offers.map(offer => offer.id);
-        franprix.addCouponsToCard(offersId)
-            .then(response =>
-                console.log(response)
-            )
-    })
+        const offersId = offers.map(offer => offer.id);
+        const response = franprix.addCouponsToCard(offersId)
+        console.log(response)
+    } catch (err) {
+        console.log(err)
+    }
+}

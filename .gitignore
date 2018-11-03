@@ -60,5 +60,4 @@ typings/
 .DS_Store
 .vscode
 
-example.js
-config.json
+config/config.json
