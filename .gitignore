@@ -61,4 +61,4 @@ typings/
 .vscode
 
 example.js
-config.example.json
+config.json
