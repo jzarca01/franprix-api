@@ -1,12 +1,12 @@
 {
   "name": "franprix-api",
-  "version": "1.1.2",
-  "description": "",
+  "version": "2.0.0",
+  "description": "API Wrapper pour Franprix",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jeremie Zarca",
+  "author": "Jeremie Zarca <jeremie.zarca@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0"
