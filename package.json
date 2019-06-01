@@ -1,6 +1,6 @@
 {
   "name": "franprix-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "API Wrapper pour Franprix",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "Jeremie Zarca <jeremie.zarca@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.19.0"
   }
 }
