@@ -32,6 +32,12 @@ franprix.getAvailablePromotions();
 franprix.getAvailableAdvantages();
 ```
 
+### Get all available
+
+```javascript
+franprix.getAllAvailable();
+```
+
 ### Get user's promotions
 
 ```javascript
